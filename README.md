@@ -1,17 +1,17 @@
 <html lang="he" dir="rtl">
   <head>
     <meta charset="utf-8">
-    <title>MATAN SULIMAN</title>
+    <title>מתן סולימן</title>
   </head>
   <body>
-    <h1>this is my page</h1>
+    <h1>הדף הראשון שלי</h1>
 
-    <p>this is my page</p>
+    <p>הדף הראשון שלי</p>
 
     <ul> 
-      <li>technologists</li>
-      <li>thinkers</li>
-      <li>builders</li>
+      <li>סטודנט</li>
+      <li>למדמח</li>
+      <li>בפתוחה</li>
     </ul>
   </body>
 </html>
