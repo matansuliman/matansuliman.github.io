@@ -68,14 +68,14 @@ body {
 }
 
 .section {
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   max-width: 800px;
   margin: auto;
   text-align: center;
 }
 
 .projects {
-  padding: 3rem 1rem;
+  padding: 0.5rem 1rem;
   max-width: 1000px;
   margin: auto;
   text-align: center;
