@@ -1,0 +1,136 @@
+:root {
+  --c1: #004e92;
+  --c2: #000428;
+  --accent: #00c2ff;
+  --bg: #f4f6fb;
+  --text: #1f2d3d;
+}
+
+body {
+  font-family: "Alef", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background: linear-gradient(to left, var(--c2), var(--c1));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(to bottom right, var(--c1), var(--c2));
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #00a4d4;
+}
+
+.section {
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.projects {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card h3 {
+  color: var(--c1);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--c2);
+  color: white;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact a {
+  color: var(--accent);
+  font-weight: 600;
+}
