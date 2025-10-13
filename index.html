@@ -108,7 +108,11 @@
   </section>
 
   <footer>
-    <p>© 2025 Matan Suliman • <a href="https://github.com/matansuliman" target="_blank">GitHub</a></p>
+    <p>© <span id="year"></span> Matan Suliman</p>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
