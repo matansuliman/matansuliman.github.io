@@ -75,7 +75,7 @@ body {
 }
 
 .projects {
-  padding: 0.5rem 1rem;
+  padding: 2rem 1rem;
   max-width: 1000px;
   margin: auto;
   text-align: center;
@@ -134,3 +134,7 @@ footer a {
   color: var(--accent);
   font-weight: 600;
 }
+
+
+.topnav { position: sticky; top: 0; background:#fff; border-bottom:1px solid #eee; padding:.5rem 1rem; }
+.topnav a { margin-right:1rem; text-decoration:none; color:#333; }
