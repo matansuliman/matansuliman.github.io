@@ -16,20 +16,23 @@ body {
 }
 
 .navbar {
-    position: fixed;        /* floats above everything */
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* translucent dark layer */
-    padding: 0.5rem 1rem;
-    backdrop-filter: blur(6px);
+  position: fixed;
+  /* floats above everything */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  /* translucent dark layer */
+  padding: 0.5rem 1rem;
+  backdrop-filter: blur(6px);
 }
+
 .navbar a {
-    margin-right:2rem;
-    text-decoration:none;
-    color: white;
-    transition: opacity 0.2s ease;
+  margin-right: 2rem;
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.2s ease;
 }
 
 .navbar a:hover {
@@ -135,5 +138,3 @@ footer a {
   color: var(--accent);
   font-weight: 600;
 }
-
-
