@@ -121,6 +121,11 @@ body {
   font-weight: 600;
 }
 
+.project-card iframe {
+  width: 100% !important;
+  height: 320px !important;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
