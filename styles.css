@@ -227,3 +227,55 @@ header#about.bg-primary {
 #backToTop:active {
   transform: scale(0.95);
 }
+
+
+
+
+
+.linkedin-btn {
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform-origin: left top;
+}
+
+/* hover – הכפתור "נמס" */
+.linkedin-hover-wrapper:hover .linkedin-btn {
+  transform: scaleX(0.85);
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.linkedin-hover-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.linkedin-badge-reveal {
+  position: absolute;
+
+  /* אותו anchor כמו הכפתור */
+  left: 0;
+  top: 0;
+
+  margin-left: 0;
+
+  padding: 8px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  z-index: 20;
+
+  min-width: 320px;
+
+  transform: scaleX(0);
+  transform-origin: left top;
+  opacity: 0;
+
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+/* hover – התג "גדל" */
+.linkedin-hover-wrapper:hover .linkedin-badge-reveal {
+  transform: scaleX(1);
+  opacity: 1;
+}
