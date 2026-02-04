@@ -279,3 +279,13 @@ header#about.bg-primary {
   transform: scaleX(1);
   opacity: 1;
 }
+
+/* Image height limit utility */
+.img-h-limit {
+  max-height: 90vh;
+  width: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
