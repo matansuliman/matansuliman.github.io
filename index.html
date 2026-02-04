@@ -122,20 +122,44 @@
       <h3>LegiBit – SaaS Cloud & DevOps Deployment</h3>
 
       <p>
-        <strong>January 2025 – Present</strong><br><br>
-        Designed and deployed GitOps-Based SaaS cloud application:
+        <strong>January 2025 – Present</strong>
+      </p>
+
+      <div class="mb-3">
+        <img src="assets/techs.svg" alt="Technologies Stack" class="img-fluid rounded shadow-sm w-100">
+      </div>
+
+      <p>
+        Designed and deployed a <b>GitOps-based SaaS cloud application</b>:
       </p>
 
       <ul class="text-start mt-2">
-        <li>Deployed multi-service application in a <b>k3s cluster</b> on a single <b>AWS EC2 instance</b>.</li>
-        <li>Integrated <b>Amazon S3</b>, <b>AWS SES</b> and <b>MongoDB</b>.</li>
-        <li>Configured domain routing and DNS using <b>Amazon Route 53</b>.</li>
-        <li>Used <b>AWS ALB</b> and target groups configuration for load balancing.</li>
-        <li>Built CI pipeline with <b>GitHub Actions</b> to build and publish container images.</li>
-        <li>Managed deployments with <b>Argo CD</b> following <b>GitOps</b> principles.</li>
-        <li>Implemented monitoring using <b>Prometheus</b> and <b>Grafana</b>.</li>
-        <li>Automated system configuration using <b>Ansible</b>.</li>
+        <li>
+          <h6 class="mt-3">Application / Delivery / Observability</h6>
+          <ul class="text-start mt-2">
+            <li>Integrated <b>Amazon S3</b>, <b>AWS SES</b>, and <b>MongoDB</b>.</li>
+            <li>Managed application secrets using <b>AWS Secrets Manager</b>.</li>
+            <li>Built CI pipelines with <b>GitHub Actions</b> to build and publish container images.</li>
+            <li>Managed deployments with <b>Argo CD</b> following <b>GitOps</b> principles.</li>
+            <li>Implemented monitoring using <b>Prometheus</b> and <b>Grafana</b>.</li>
+          </ul>
+        </li>
+        <li>
+          <h6 class="mt-3">Infrastructure / Platform / Security</h6>
+          <ul class="text-start mt-2">
+            <li>Deployed a multi-service application in a <b>k3s cluster</b> on a single <b>AWS EC2 instance</b>.</li>
+            <li>Registered a domain name using <b>Amazon Route 53</b>.</li>
+            <li>Exposed services through <b>Cloudflare</b> as a <b>reverse proxy</b> with <b>Zero Trust</b> access
+              control
+              and secure tunneling.</li>
+            <li>Automated system configuration using <b>Ansible</b>.</li>
+          </ul>
+        </li>
       </ul>
+
+
+
+
 
       <p>
         <strong>Repositories: </strong>
@@ -149,31 +173,29 @@
       <div class="row g-4 mt-4">
 
         <!-- Row 1 -->
-        <div class="col-12 col-md-6">
-          <strong>TECHS</strong>
-          <div class="mt-2"></div>
-          <img src="assets/techs.svg" alt="Technologies Stack" class="img-fluid rounded shadow-sm w-100">
-        </div>
-
-        <div class="col-12 col-md-6">
+        <div class="col-12">
           <strong>CI/CD FLOW</strong>
-          <div class="mt-2"></div>
-          <img src="assets/CICD.svg" alt="CI/CD Pipeline Diagram" class="img-fluid rounded shadow-sm w-100">
+          <img src="assets/CICD.svg" alt="CI/CD Pipeline Diagram" class="img-fluid rounded shadow-sm img-h-limit">
         </div>
 
-        <!-- Row 2 -->
-        <div class="col-12 col-md-6">
-          <strong>Kubernetes Architecture</strong>
-          <div class="mt-2"></div>
-          <img src="assets/legibit ns.svg" alt="Kubernetes Namespaces Layout" class="img-fluid rounded shadow-sm w-100">
-        </div>
+      </div>
 
-        <div class="col-12 col-md-6">
+      <!-- Row 2 -->
+      <div class="row g-4 mt-4">
+        <div class="col-12">
           <strong>AWS Infrastructure Layout</strong>
-          <div class="mt-2"></div>
-          <img src="assets/connectivity.svg" alt="AWS Architecture Diagram" class="img-fluid rounded shadow-sm w-100">
+          <img src="assets/connectivity.svg" alt="AWS Architecture Diagram"
+            class="img-fluid rounded shadow-sm img-h-limit">
         </div>
+      </div>
 
+      <!-- Row 3 -->
+      <div class="row g-4 mt-4">
+        <div class="col-12">
+          <strong>Kubernetes Architecture</strong>
+          <img src="assets/legibit ns.svg" alt="Kubernetes Namespaces Layout"
+            class="img-fluid rounded shadow-sm img-h-limit">
+        </div>
       </div>
 
     </div>
