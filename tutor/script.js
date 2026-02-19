@@ -1,53 +1,71 @@
-/* script.js */
-document.addEventListener('DOMContentLoaded', () => {
+// Mobile Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-    // --- Mobile Menu Toggle ---
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const closeMenu = document.querySelector('.close-menu');
-    const mobileOverlay = document.querySelector('.mobile-menu-overlay');
-    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-    function toggleMenu() {
-        mobileOverlay.classList.toggle('active');
-        document.body.style.overflow = mobileOverlay.classList.contains('active') ? 'hidden' : ''; // Prevent body scroll
-    }
-
-    if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
-    if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
-
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            toggleMenu(); // Close on click
-        });
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
     });
+}
 
-    // --- Observer for Fade-ins ---
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
+// Scroll Animation Observer
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+};
 
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
-
-    // Smooth Scroll for Navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const headerOffset = 80;
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
     });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in, .scroll-reveal').forEach(el => {
+    observer.observe(el);
 });
+
+// --- Security Features (No Zoom, No Context Menu) ---
+
+// 1. Disable Context Menu (Right Click)
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+}, false);
+
+// 2. Disable Zoom on iOS (Gesture)
+document.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+});
+document.addEventListener('gesturechange', function (e) {
+    e.preventDefault();
+});
+document.addEventListener('gestureend', function (e) {
+    e.preventDefault();
+});
+
+// 3. Disable Zoom via Keyboard (Ctrl + / - / 0)
+document.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0' || e.key === '=')) {
+        e.preventDefault();
+    }
+});
+
+// 4. Disable Zoom via Mouse Wheel (Ctrl + Scroll)
+document.addEventListener('wheel', function (e) {
+    if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+    }
+}, { passive: false });
+
+// 5. Disable Touch Zoom (Double Tap) mostly handled by CSS touch-action, but extra safety:
+let lastTouchEnd = 0;
+document.addEventListener('touchend', function (e) {
+    const now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+        e.preventDefault();
+    }
+    lastTouchEnd = now;
+}, false);

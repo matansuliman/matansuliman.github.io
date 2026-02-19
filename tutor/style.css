@@ -34,6 +34,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    touch-action: pan-x pan-y;
+    /* Global zoom disable */
 }
 
 body {
@@ -43,6 +45,27 @@ body {
     background-color: var(--bg-light);
     direction: rtl;
     overflow-x: hidden;
+    /* Security: Disable Zoom & Copy */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    touch-action: pan-x pan-y;
+    /* Disables pinch zoom */
+}
+
+/* Prevent Image Dragging */
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+    /* Disables context menu/saving easily */
+}
+
+/* Allow pointer events for specific interactive images if needed, e.g. profile */
+.hero-profile-image img {
+    pointer-events: auto;
+    /* Re-enable hover effect */
 }
 
 h1,
